@@ -7,9 +7,14 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import streamlit as st
+from PIL import Image
 from streamlit.components.v1 import html as st_html
 
-st.set_page_config(page_title="Propify Demo", page_icon="📈", layout="wide")
+APP_DIR = Path(__file__).parent
+_favicon_path = APP_DIR / "propifynowordslogo.png"
+_favicon = Image.open(_favicon_path) if _favicon_path.exists() else "📈"
+
+st.set_page_config(page_title="Propify Demo", page_icon=_favicon, layout="wide")
 
 TARHEEL_BLUE = "#7BAFD4"
 APP_DIR = Path(__file__).parent
