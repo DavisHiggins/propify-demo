@@ -45,6 +45,7 @@ This demo communicates that the full Propify platform is planned for broader pub
 ## Tech stack
 
 - Python
+- Railway
 - Streamlit
 - NumPy
 - Pandas
