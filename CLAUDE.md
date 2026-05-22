@@ -2,13 +2,11 @@
 
 ## Project Overview
 Public-facing demo of Propify, my private NBA player prop analytics platform.
-Deployed at propifydemo.up.railway.app. This is a portfolio/recruitment asset —
-NOT the production product.
+Deployed at propifydemo.up.railway.app.
 
 **Critical distinction:** This repo intentionally exposes ONLY the UI shell and
 deterministic preview output. The real model, probability logic, data pipelines,
-auth, and tracking backend live in the private Propify repo and must never leak
-into this codebase.
+auth, and tracking backend are private.
 
 ## Tech Stack
 - Python 3.x (see `runtime.txt`)
@@ -16,13 +14,6 @@ into this codebase.
 - NumPy, Pandas (data layer)
 - Railway (deployment via `railway.json` + `Procfile`)
 - Devcontainer support (`.devcontainer/`)
-
-## Repository Structure
-- `propify_demo_app.py` — single-file Streamlit app, the entire demo
-- `config.toml` — Streamlit theme config
-- `propifynowordslogo.png` — logo asset
-- `requirements.txt` — pinned Python deps
-- `DEPLOY.md` — Railway deployment notes
 
 ## Architecture Rules
 - **Single-file app.** Do not split into modules unless I explicitly ask. Mirror
@@ -35,25 +26,3 @@ into this codebase.
   product-preview UI only — visible but non-functional. Don't make them work.
 - **Blurred values stay blurred.** The visual blur on analytical values is a
   feature, not a bug.
-
-## UI / Brand
-- Brand color: Tarheel blue gradient (#4B9CD3 base)
-- Navigation hierarchy: Analyze → Parlays → Tracking → Learn → Account
-- Only `Analyze` accepts user input (player, stat, line, opponent)
-- Visual polish > functional depth. This is a product preview.
-
-## Workflow Preferences
-- Quantify changes when discussing scope ("3 new sections, ~80 lines")
-- Default to minimal diffs; don't refactor untouched code
-- When suggesting features, flag whether they belong in demo vs private repo
-- If a change feels like it should live in private Propify, stop and ask
-
-## Deployment
-- Railway via `railway.json` + `Procfile`
-- Test locally with `streamlit run propify_demo_app.py` before pushing
-- Don't bump deps without checking Railway compatibility
-
-## What This Repo Communicates
-This is a recruiter / public-facing artifact. Code quality, comments, and
-README polish matter more than feature volume. Treat every commit like
-someone reviewing my resume will read it.
