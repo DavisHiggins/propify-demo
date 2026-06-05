@@ -1,63 +1,37 @@
 # Propify Demo
 
-Propify Demo is the public-facing preview of Propify, a private NBA player prop analytics platform.
+Public demo of Propify, a private NBA player prop analytics platform.
 
-## What this demo is for
+## Overview
 
-This build is designed to show the real Propify product structure without exposing proprietary analytics.
+Propify Demo is a public-facing preview of the Propify product experience. It showcases the platform’s layout, product flow, and analytics interface without exposing proprietary modeling, backend logic, private metrics, or account-based tracking systems.
 
-It mirrors the private application's:
-- home screen
-- header and navigation hierarchy
-- Analyze / Parlays / Tracking / Learn / Account layout
-- single-prop workflow
-- parlay workflow structure
-- dashboard and knowledge-base sections
+## Features
 
-## What is interactive
+- Simulated NBA player prop analysis workflow
+- Public preview of the Propify interface
+- Analyze, Parlays, Tracking, Learn, and Account layout structure
+- Locked sections for private product features
+- Blurred/protected values for proprietary analytics
+- Clean sports analytics dashboard experience
 
-The public demo intentionally allows only one live workflow:
-
-- **Analyze** — users can enter a player, stat, line, and opponent to generate a deterministic demo analysis preview
-
-Everything else is visible as a product preview, but locked:
-
-- Parlays
-- Tracking
-- Account features
-- private metric explanations
-- saved picks, grading, and account-linked data
-
-## Why the results are blurred
-
-The real Propify platform includes proprietary modeling, probability logic, tracking, and internal product features.
-
-To keep the public demo professional while protecting private work, most analytical values are intentionally blurred. The public demo focuses on:
-- UI
-- information architecture
-- product flow
-- visual polish
-
-## Release framing
-
-This demo communicates that the full Propify platform is planned for broader public release sometime in **2026**, while keeping the exact release window private.
-
-## Tech stack
+## Tech Stack
 
 - Python
-- Railway
 - Streamlit
 - NumPy
 - Pandas
+- Railway
+
+## Live Demo
+
+https://propifydemo.up.railway.app
 
 ## Notes
 
-This repository is a **public demo only**.
+This repository is a public demo only. It does not include the private production model, protected data pipelines, authentication logic, account tracking backend, or release-only features.
 
-It does **not** include:
-- the private production model
-- private data pipelines
-- authentication logic
-- per-user tracking backend
-- protected model weights
-- internal release-only features
+## Author
+
+Built by Davis Higgins  
+GitHub: https://github.com/DavisHiggins
